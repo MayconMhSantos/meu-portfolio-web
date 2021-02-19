@@ -506,34 +506,31 @@ a.btn:active {
 
 /* contato */
 
-.contact-center {
+.content {
+    justify-content: center;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
 }
 
-.left h2 {
-   font-size: 2rem; 
+.left h3 {
+    font-size: 2.2rem;
+    text-align: center;
 }
 
-.left p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
+.left span {
+    font-size: 1.8rem;
 }
+
 
 .left div {
-    display: flex;
     align-items: center;
     margin-bottom: 1.5rem;
 }
 
-.left div .content{
-    text-align: left;
-}
 
 .left .icon {
-    margin-right: 2rem;
-    font-size: 2.3rem;
+    font-size: 2.7rem;
+    justify-content: center;
+    display: grid;
     color: darkorange;
 }
 

@@ -1,10 +1,8 @@
-const menu = document.querySelector(".menu");
-const navOpen = document.querySelector(".hamburger");
-const navClose = document.querySelector(".close");
-const navBar = document.querySelector(".nav");
+const menu = document.querySelector(".menu")
+const navOpen = document.querySelector(".hamburger")
+const navClose = document.querySelector(".close")
+const navBar = document.querySelector(".nav")
 const tgle = document.querySelector(".nav-list");
-
-
 
 const navLeft = menu.getBoundingClientRect().left;
 navOpen.addEventListener("click", () => {
@@ -15,15 +13,6 @@ navOpen.addEventListener("click", () => {
     navBar.classList.add("show");
   }
 });
-
-
-tgle.addEventListener('click', () => {
-  if (navLeft < 0) {
-    menu.classList.remove("show");
-    document.body.classList.remove("show");
-    navBar.classList.remove("show");
-}
-})
 
 navClose.addEventListener("click", ()=>{
     if (navLeft < 0) {
@@ -44,13 +33,6 @@ window.addEventListener('scroll', () =>{
     }
 })
 
-btnContato.addEventListener("click", () => {
-  console.log("clicou")
-  validar();
-})
-
-
-
 // Scroll To
 const links = [...document.querySelectorAll(".scroll-link")];
 links.map(link => {
@@ -59,6 +41,7 @@ links.map(link => {
 
     const id = e.target.getAttribute("href").slice(1);
     const element = document.getElementById(id);
+    const fixNav = navBar.classList.contains("fix-nav");
     let position = element.offsetTop - navHeight;
 
     window.scrollTo({
@@ -71,6 +54,14 @@ links.map(link => {
     document.body.classList.remove("show");
   });
 });
+
+tgle.addEventListener('click', () => {
+    if (navLeft < 0) {
+      menu.classList.remove("show");
+      document.body.classList.remove("show");
+      navBar.classList.remove("show");
+  }
+})
 
 new TypeIt("#type1", {
     speed: 120,
@@ -90,10 +81,10 @@ new TypeIt("#type2", {
     loop: true,
     waitUntilVisible: true,
     })
-    .type("Santos", { delay: 400 })
+    .type("Developer Junior!", { delay: 400 })
     .pause(2000)
-    .delete(6)
-    .type("Dev Junior", { delay: 400 })
+    .delete(7)
+    .type("JavaScript", { delay: 400 })
     .pause(2000)
     .delete(20)
     .go();
